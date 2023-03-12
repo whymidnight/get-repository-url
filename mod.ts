@@ -11,6 +11,11 @@ import pkg from "npm:get-pkg";
 const isObject = (val?: Record<string, unknown>) =>
   val !== null && typeof val === "object";
 
+export type Repository = {
+  repository: string;
+  url: string;
+};
+
 async function repository(pkg: {
   repository: {
     url: string;
@@ -21,10 +26,7 @@ async function repository(pkg: {
   bugs: {
     url: string;
   };
-}): Promise<{
-  repository: string;
-  url: string;
-}> {
+}): Promise<Repository> {
   let url: { url: string } | string =
     pkg.repository || pkg.homepage || (pkg.bugs && pkg.bugs.url);
   if (isObject(url)) {
