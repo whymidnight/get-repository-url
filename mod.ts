@@ -42,8 +42,8 @@ async function repository(pkg: {
 
   const parsed = await parse(url);
   return {
-    url: pkg.repository.url,
-    repository: `https://github.com/${parsed.repository}`,
+    repository: pkg.repository.url,
+    url: `https://github.com/${parsed.repository}`,
   };
 }
 
