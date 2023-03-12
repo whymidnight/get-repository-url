@@ -47,6 +47,6 @@ async function repository(pkg: {
   };
 }
 
-export async function getRepsitoryUrl(name: string) {
+export async function getRepositoryUrl(name: string) {
   return await repository(await pkg(name));
 }

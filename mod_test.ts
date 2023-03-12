@@ -8,9 +8,9 @@
  */
 
 // var repositoryURL = require("./");
-import { getRepsitoryUrl } from "./mod.ts";
+import { getRepositoryUrl } from "./mod.ts";
 
 Deno.test("fetch", async () => {
-  console.log(await getRepsitoryUrl("@solana/web3.js"));
-  console.log(await getRepsitoryUrl("@solana/buffer-layout"));
+  console.log(await getRepositoryUrl("@solana/web3.js"));
+  console.log(await getRepositoryUrl("@solana/buffer-layout"));
 });
